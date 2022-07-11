@@ -1,11 +1,12 @@
 on: push
-name: deploy
+name: deploy-2
 jobs:
   deploy-to-cluster:
     name: deploy to cluster
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@master
+    - name: user github actions
+      uses: actions/checkout@v2.4.2
     - name: build and push to docker
       uses: docker/build-push-action@v1
       with:
